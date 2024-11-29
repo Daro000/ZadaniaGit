@@ -15,3 +15,42 @@ const processText = (text, { uppercase = false, reverse = false, removeSpecialCh
 };
 
 processText('Hello World', { uppercase: true , removeSpecialChars: true });
+
+/////////////////////////////////////////////////
+
+class Calculator{
+    add({num1,num2}){
+        const result = num1 + num2
+        console.log(`Wynik dodawania ${num1} + ${num2} = ${result}`)
+        return result
+    }
+
+    subtract({num1,num2}){
+        const result = num1 - num2
+        console.log(`Wynik odejmowania ${num1} - ${num2} = ${result}`)
+        return result
+    }
+
+    multiply({num1,num2}){
+        const result = num1 * num2
+        console.log(`Wynik mnozenia ${num1} * ${num2} = ${result}`)
+        return result
+    }
+
+    divide({ num1, num2 }) {
+        if (num2 === 0) {
+            console.log("Nie da się dzielić przez 0!");
+            return;
+        }
+
+        const result = num1 / num2
+        console.log(`Wynik dzielenia ${num1} / ${num2} = ${result}`)
+    }
+}
+
+const calculator = new Calculator()
+
+const addResult = calculator.add({ num1: 5, num2: 3 });
+const subtractResult = calculator.subtract({ num1: 10, num2: 4 });
+const multiplyResult = calculator.multiply({ num1: 7, num2: 6 });
+const divideResult = calculator.divide({ num1: 8, num2: 0 });
