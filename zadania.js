@@ -94,3 +94,36 @@ student2.addGrade(3);
 student1.displayInfo();
 student2.displayInfo(); 
 student3.displayInfo(); 
+
+
+//////////////////////////////////////////////
+
+//tablica obiektow
+const products = [
+    { name: 'Laptop', price: 1200, category: 'Electronics' },
+    { name: 'Shirt', price: 50, category: 'Clothing' },
+    { name: 'Smartphone', price: 900, category: 'Electronics' },
+    { name: 'Socks', price: 10, category: 'Clothing' },
+    { name: 'Headphones', price: 200, category: 'Electronics' },
+    { name: 'Jacket', price: 150, category: 'Clothing' }
+];
+
+
+function filterProducts(category, minPrice, maxPrice) {
+    
+    const filteredByCategory = products.filter(product => product.category === category); //filtruje kazdy produkt po kategorii
+
+    
+    const filteredByPrice = filteredByCategory.filter(({ price }) => price >= minPrice && price <= maxPrice); // uzycie poprzedniego flitrowania filteredByCategory 
+    //uzycie destrukturyzacji aby dostac sie bezposrednio do ceny
+
+    
+    if (filteredByPrice.length === 0) {
+        console.log('Nie znaleziono produktow');
+    } else {
+        filteredByPrice.forEach(({ name, price, category }) => {  //iteracja po kazdym przeflitrowanym produkcie filteredByPrice
+            console.log(`Product: ${name}, Category: ${category}, Price: $${price}`);// destrukturyzacja aby wyswieltic dane produktow
+        });
+    }
+}
+
