@@ -145,4 +145,22 @@ class Cart{
     constructor(){
         this.produkt = [];
     };
+
+
+
+    dodajProdukt(produkt){
+        this.produkt =[...this.produkt,produkt];
+    }
+
+    usunProdukt(nazwaProduktu){
+        this.produkt = this.produkt.filter(p => p.nazwa !== nazwaProduktu);
+    }
+
+    pokazKoszyk(){
+        console.log("Zawartość koszyka:");
+      this.produkt.forEach(produkt => {
+        console.log(`${produkt.nazwa} - Cena: ${produkt.cena} PLN, Ilość: ${produkt.ilosc}`);
+      });
+    }
+
 }
