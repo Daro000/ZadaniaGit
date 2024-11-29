@@ -127,3 +127,5 @@ function filterProducts(category, minPrice, maxPrice) {
     }
 }
 
+// przyklad użycia funkcji - filtracja produktów z kategorii 'Electronics' w cenie od 100 do 1000
+filterProducts('Electronics', 100, 1000);
