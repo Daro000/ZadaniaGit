@@ -83,3 +83,14 @@ class Student{
     }
 }
 
+const student1 = new Student({ name: 'Robert Lewandowski', age: 20, grades: [5, 4, 3, 4] });
+const student2 = new Student({ name: 'Anna Lewandowska', age: 22, grades: [3, 5, 4] });
+const student3 = new Student({ name: 'Piotr Zieliński', age: 21, grades: [2, 3, 4] });
+
+student1.addGrade(5);
+student2.addGrade(3);
+
+
+student1.displayInfo();
+student2.displayInfo(); 
+student3.displayInfo(); 
