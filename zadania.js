@@ -239,4 +239,7 @@ const wyswietlStatystyki = (wyniki) => {
 wyswietlWyniki(wynikiTestow);
 wyswietlStatystyki(wynikiTestow);
 
-
+//wynik powyżej 80
+const studenciPowyzej80List = studenciPowyzej80(wynikiTestow);
+console.log('Studenci z wynikiem powyżej 80:');
+wyswietlWyniki(studenciPowyzej80List);
