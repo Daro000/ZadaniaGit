@@ -224,4 +224,19 @@ const wyswietlWyniki = (wyniki) => {
     });
 };
 
+//ogolnie statystyki testu
+const wyswietlStatystyki = (wyniki) => {
+    const srednia = obliczSrednia(wyniki);
+    const najwyzszy = najwyzszyWynik(wyniki);
+    const najnizszy = najnizszyWynik(wyniki);
+
+    console.log(`Średnia wyników: ${srednia.toFixed(2)}`);
+    console.log(`Najwyższy wynik: ${najwyzszy}`);
+    console.log(`Najniższy wynik: ${najnizszy}`);
+};
+
+// Przykładowe użycie aplikacji
+wyswietlWyniki(wynikiTestow);
+wyswietlStatystyki(wynikiTestow);
+
 
