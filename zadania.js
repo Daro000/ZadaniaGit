@@ -212,3 +212,16 @@ const najnizszyWynik = (wyniki) => {
     return wyniki.reduce((min, { wynik }) => (wynik < min ? wynik : min), 100);
 };
 
+// wyniki powyzej 80
+const studenciPowyzej80 = (wyniki) => {
+    return wyniki.filter(({ wynik }) => wynik > 80); 
+};
+
+// 
+const wyswietlWyniki = (wyniki) => {
+    wyniki.map(({ imie, nazwisko, wynik }) => {
+        console.log(`${imie} ${nazwisko} - Wynik: ${wynik}`);
+    });
+};
+
+
