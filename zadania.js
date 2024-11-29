@@ -129,3 +129,20 @@ function filterProducts(category, minPrice, maxPrice) {
 
 // przyklad użycia funkcji - filtracja produktów z kategorii 'Electronics' w cenie od 100 do 1000
 filterProducts('Electronics', 100, 1000);
+
+
+//////////////////////////////////////////////
+
+class Produkt{
+    constructor(nazwa,cena,ilosc){
+        this.nazwa = nazwa;
+        this.cena = cena;
+        this.ilosc = ilosc;
+    }
+}
+
+class Cart{
+    constructor(){
+        this.produkt = [];
+    };
+}
