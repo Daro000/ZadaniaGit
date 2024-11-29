@@ -184,3 +184,31 @@ cart.usunProdukt("Myszka");
 cart.pokazKoszyk();
 
 
+///////////////////////////////////////////
+
+
+
+const wynikiTestow = [
+    { imie: 'Anna', nazwisko: 'Kowalska', wynik: 85 },
+    { imie: 'Piotr', nazwisko: 'Nowak', wynik: 92 },
+    { imie: 'Kasia', nazwisko: 'Zalewska', wynik: 76 },
+    { imie: 'Tomasz', nazwisko: 'Wiśniewski', wynik: 65 },
+    { imie: 'Jan', nazwisko: 'Wojciechowski', wynik: 98 }
+];
+
+
+const obliczSrednia = (wyniki) => {
+    const suma = wyniki.reduce((suma, { wynik }) => suma + wynik, 0); 
+    return suma / wyniki.length;
+};
+
+
+const najwyzszyWynik = (wyniki) => {
+    return wyniki.reduce((max, { wynik }) => (wynik > max ? wynik : max), 0);
+};
+
+
+const najnizszyWynik = (wyniki) => {
+    return wyniki.reduce((min, { wynik }) => (wynik < min ? wynik : min), 100);
+};
+
