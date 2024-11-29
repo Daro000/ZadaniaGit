@@ -164,3 +164,23 @@ class Cart{
     }
 
 }
+
+const produkt1 = new Produkt("Laptop",3000,1);
+const produkt2 = new Produkt("Smartphone", 1500, 2);
+const produkt3 = new Produkt("Myszka", 50, 1);
+
+const cart = new Cart();
+
+
+cart.dodajProdukt(produkt1);
+cart.dodajProdukt(produkt2);
+cart.dodajProdukt(produkt3);
+
+
+cart.pokazKoszyk();
+
+cart.usunProdukt("Myszka");
+
+cart.pokazKoszyk();
+
+
