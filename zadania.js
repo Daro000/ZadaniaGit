@@ -54,3 +54,32 @@ const addResult = calculator.add({ num1: 5, num2: 3 });
 const subtractResult = calculator.subtract({ num1: 10, num2: 4 });
 const multiplyResult = calculator.multiply({ num1: 7, num2: 6 });
 const divideResult = calculator.divide({ num1: 8, num2: 0 });
+
+////////////////////////////////////////
+
+class Student{
+    constructor({name,age,grades=[]}){
+        this.name = name
+        this.age = age
+        this.grades = grades
+
+}
+
+    addGrade(newGrade){
+        this.grades=[...this.grades,newGrade]
+        console.log(`Dodano nowa ocene`)
+    }
+
+    getAverage() {
+        const total = this.grades.reduce((acc, grade) => acc + grade, 0);
+        const average = total / this.grades.length;
+        return average;
+    }
+
+
+    displayInfo() {
+        const average = this.getAverage();
+        console.log(`${this.name}, wiek: ${this.age}, średnia ocen: ${average.toFixed(2)}`);
+    }
+}
+
